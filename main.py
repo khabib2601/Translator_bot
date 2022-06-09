@@ -40,26 +40,46 @@ async def tajik(call: CallbackQuery):
 	display=tr.translate(word,dest="tg")
 	await call.message.answer(display.text)
 
+@dp.callback_query_handler(text="ar")
+async def arabic(call: CallbackQuery):
+	display=tr.translate(word,dest="ar")
+	await call.message.answer(display.text)
+
+@dp.callback_query_handler(text="fr")
+async def french(call: CallbackQuery):
+	display=tr.translate(word,dest="fr")
+	await call.message.answer(display.text)
+
+@dp.callback_query_handler(text="ko")
+async def korean(call: CallbackQuery):
+	display=tr.translate(word,dest="ko")
+	await call.message.answer(display.text)
+
+@dp.callback_query_handler(text="ja")
+async def japanese(call: CallbackQuery):
+	display=tr.translate(word,dest="ja")
+	await call.message.answer(display.text)
+
+@dp.callback_query_handler(text="de")
+async def german(call: CallbackQuery):
+	display=tr.translate(word,dest="de")
+	await call.message.answer(display.text)
+
+@dp.callback_query_handler(text="el")
+async def greek(call: CallbackQuery):
+	display=tr.translate(word,dest="el")
+	await call.message.answer(display.text)
+
+@dp.callback_query_handler(text="it")
+async def italian(call: CallbackQuery):
+	display=tr.translate(word,dest="it")
+	await call.message.answer(display.text)
+
+@dp.callback_query_handler(text="es")
+async def spanish(call: CallbackQuery):
+	display=tr.translate(word,dest="es")
+	await call.message.answer(display.text)
+
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
 
-
-
-
-# #Birinchi ko'rinish
-# tarjima = Translator()
-# display = tarjima.translate("salom",dest="ru")
-# print(display)
-
-# #Ikkinchi ko'rinish
-# tarjima = Translator()
-# word = input("So'zni kiriting: ")
-# display = tarjima.translate(word,dest="ru")
-# print(display.text)
-
-# #Uchinchi ko'rinish
-# tarjima = Translator()
-# word = input("So'zni kiriting: ")
-# language = input("Tarjima qilmoqchi bo'lgan tilni kiriting: ")
-# display = tarjima.translate(word,dest=language)
-# print(display.text)
